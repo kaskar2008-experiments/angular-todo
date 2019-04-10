@@ -19,4 +19,8 @@ export class TodosComponent implements OnInit {
     this.todos = this.todoService.getTodos();
   }
 
+  get todoLeftList() {
+    return this.todos.filter(el => !el.completed);
+  }
+
 }
