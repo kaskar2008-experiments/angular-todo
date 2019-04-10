@@ -1,1 +1,14 @@
-<li>it works</li>
+<div
+  [ngClass]="setClassList()"
+  [id]="'todo' + todo.id"
+>
+  <label>
+    <input
+      type="checkbox"
+      name=""
+      [checked]="todo.completed"
+      (change)="onCheck(todo)"
+    >
+    {{ todo.title }}
+  </label>
+</div>
